@@ -19,7 +19,7 @@ def Find_Article_Content(url, article_name):
 		all_heads = soup.find_all('h2')
 
 	#print all_heads[0].get_text()
-	gg=0
+	found_words=0
 	for i in all_heads:
 		article=i.get_text()
 		count=0
@@ -28,11 +28,11 @@ def Find_Article_Content(url, article_name):
 				count+=1
 		if count == len(article_array):
 			break
-		gg+=1
-	print all_heads
-	print gg
+		found_words+=1
+	#print all_heads
+	#print gg
 	if gg<len(all_heads):
-		article_heading = all_heads[gg].get_text()
+		article_heading = all_heads[found_words].get_text()
 		print article_heading
 
 	else:
