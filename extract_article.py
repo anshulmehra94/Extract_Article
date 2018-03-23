@@ -33,7 +33,7 @@ def Find_Article_Content(url, article_name):
 	#print gg
 	if found_words<len(all_heads):
 		article_heading = all_heads[found_words].get_text()
-		print article_heading
+		print (article_heading)
 
 	else:
 		print('article not found!')	
@@ -62,7 +62,7 @@ def Find_Article_Content(url, article_name):
 
 			article_text =parent_container.get_text()
 			
-		print article_text
+		print (article_text)
 	return article_text
 
 	
